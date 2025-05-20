@@ -4,25 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claim - Mevers</title>
+  <!-- Tailwind CDN 추가 -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/load-components.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
   <!-- 공통 네비게이션 -->
   <div id="navbar-placeholder"></div>
 
-  <!-- 반짝이는 배경 -->
-  <div id="particles-js"></div>
+  <!-- 배경 -->
+  <div id="particles-js" class="absolute top-0 left-0 w-full h-full -z-10"></div>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative z-10">
-    <h1 class="text-6xl md:text-7xl font-extrabold mb-6 text-white">Claim Your Tokens</h1>
-    <p class="text-xl md:text-2xl text-gray-200 mb-10">Connect your wallet and claim your MVS tokens easily and securely.</p>
-    <a href="#" class="bg-white text-purple-600 px-10 py-4 rounded-full text-xl font-bold shadow-lg border-2 border-purple-500 hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-105">
-      Connect Wallet
-    </a>
-  </section>
+  <!-- Hero Section: 전체 중앙 정렬 -->
+  <main class="flex-grow flex items-center justify-center text-center relative z-10 px-4">
+    <div>
+      <h1 class="text-6xl md:text-7xl font-extrabold mb-6 text-white">Claim Your Tokens</h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-10">Connect your wallet and claim your MVS tokens easily and securely.</p>
+      <a href="#" class="bg-white text-purple-600 px-12 py-5 rounded-full text-2xl font-extrabold shadow-xl border-2 border-purple-500 hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-110">
+        Connect Wallet
+      </a>
+    </div>
+  </main>
 
   <!-- 공통 푸터 -->
   <div id="footer-placeholder"></div>
