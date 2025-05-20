@@ -4,34 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claim - Mevers</title>
-  <!-- Tailwind CDN 추가 -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/load-components.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
-<body class="min-h-screen flex flex-col">
-  <!-- 공통 네비게이션 -->
+<body class="min-h-screen flex flex-col bg-black text-white">
+  <!-- Navbar -->
   <div id="navbar-placeholder"></div>
 
-  <!-- 배경 -->
+  <!-- Background -->
   <div id="particles-js" class="absolute top-0 left-0 w-full h-full -z-10"></div>
 
-  <!-- Hero Section: 전체 중앙 정렬 -->
-  <main class="flex-grow flex items-center justify-center text-center relative z-10 px-4">
-    <div>
+  <main class="flex-grow relative z-10 px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-20">
       <h1 class="text-6xl md:text-7xl font-extrabold mb-6 text-white">Claim Your Tokens</h1>
       <p class="text-xl md:text-2xl text-gray-200 mb-10">Connect your wallet and claim your MVS tokens easily and securely.</p>
       <a href="#" class="bg-white text-purple-600 px-12 py-5 rounded-full text-2xl font-extrabold shadow-xl border-2 border-purple-500 hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out transform hover:scale-110">
         Connect Wallet
       </a>
-    </div>
+    </section>
+
+    <!-- Referral Rewards Section -->
+    <section class="w-full max-w-7xl mx-auto text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 border-b border-purple-500 pb-2">Referral Rewards</h2>
+
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Your Purchase Amount: <span class="font-bold text-purple-400">$1,250</span></div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Total Referrals: <span class="font-bold text-purple-400">24</span></div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Total Referral Amount: <span class="font-bold text-purple-400">$3,600</span></div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Level Achieved: <span class="font-bold text-purple-400">Level 3</span></div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Claimed Amount: <span class="font-bold text-purple-400">$500</span></div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">Remaining Amount: <span class="font-bold text-purple-400">$2,000</span></div>
+      </div>
+
+      <!-- Referral Link -->
+      <div class="bg-gray-800 p-4 rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
+        <span class="truncate">https://mevers.one/ref/?r=0xABC...123</span>
+        <button class="mt-2 md:mt-0 md:ml-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Copy</button>
+      </div>
+
+      <!-- Wallet Address Input -->
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-4 mb-10">
+        <input type="text" placeholder="Enter your wallet address" class="w-full md:w-1/2 px-4 py-3 rounded bg-gray-700 text-white border border-purple-500 focus:outline-none" />
+        <button class="px-6 py-3 bg-purple-600 text-white rounded hover:bg-purple-700">Submit</button>
+      </div>
+
+      <!-- Claim History Table -->
+      <div class="overflow-x-auto mb-10">
+        <table class="min-w-full text-left border border-purple-500">
+          <thead class="bg-purple-700 text-white">
+            <tr>
+              <th class="p-3">Date</th>
+              <th class="p-3">Amount (USDT)</th>
+              <th class="p-3">Status</th>
+            </tr>
+          </thead>
+          <tbody class="bg-gray-900">
+            <tr>
+              <td class="p-3">2025-05-01</td>
+              <td class="p-3">$300</td>
+              <td class="p-3 text-green-400">Completed</td>
+            </tr>
+            <tr>
+              <td class="p-3">2025-05-15</td>
+              <td class="p-3">$250</td>
+              <td class="p-3 text-green-400">Completed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Claim Button -->
+      <div class="text-center">
+        <button class="px-10 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-xl font-bold shadow-lg hover:scale-105 transition transform duration-300">Claim Referral Rewards</button>
+      </div>
+
+      <!-- Notice -->
+      <p class="mt-4 text-sm text-gray-400 text-center">* Claims are allowed once per day. Rewards are reflected after the qualifying date.</p>
+    </section>
   </main>
 
-  <!-- 공통 푸터 -->
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
 
-  <!-- particles.js init -->
   <script>
     particlesJS.load('particles-js', 'config/particles.json');
   </script>
